@@ -3,7 +3,7 @@
 %
 % Can't make any promises for anything not in the test cases
 %
-% There is a catch in the FALSEHOOD-ellimination deduction
+% There is a catch in the FALSEHOOD-introduction deduction
 % to keep prolog from spinning infinitely
 %
 % A list of attempted moves can be seen by switching the
@@ -14,7 +14,7 @@ indent(N) :- N > 0, write('.'), indent(N-1).
 indent(N) :- true.
 
 try(S,X,N,Comment) :- 
-	%indent(N), write('Trying: '), write(S), write(' :- '), write(X), writeln(Comment).
+	%indent(N), write('Trying: '), write(S), write(' :- '), write(X), writeln(Comment),
 	true.
 
 catch(S,X,N,Comment) :- 
